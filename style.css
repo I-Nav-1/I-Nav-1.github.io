@@ -32,7 +32,7 @@ body[data-theme="green"] {
 /* Sunset theme */
 body[data-theme="sunset"] {
   --bg-color: #ff5722;
-  --text-color: #ffffff;
+  --text-color: #e8f5e9;
   --primary-color: #ff4081;
   --accent-color: #ffeb3b;
 }
@@ -159,3 +159,4 @@ section p {
     margin-top: 10px;
   }
 }
+
