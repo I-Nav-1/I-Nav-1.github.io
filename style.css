@@ -1,63 +1,161 @@
 :root {
   --bg-color: #ffffff;
-  --text-color: #1a1a1a;
-  --primary-color: #5a67d8;
+  --text-color: #1f1f1f;
+  --primary-color: #4a4aff;
+  --accent-color: #ff5a5a;
 }
 
-/* DARK */
+/* Dark theme */
 body[data-theme="dark"] {
   --bg-color: #121212;
-  --text-color: #ffffff;
-  --primary-color: #7f9cf5;
+  --text-color: #e0e0e0;
+  --primary-color: #6c63ff;
+  --accent-color: #ff6f61;
 }
 
-/* BLUE */
+/* Blue theme */
 body[data-theme="blue"] {
   --bg-color: #001f3f;
   --text-color: #ffffff;
-  --primary-color: #39CCCC;
+  --primary-color: #39cccc;
+  --accent-color: #ff7f50;
 }
 
-/* GREEN */
+/* Green theme */
 body[data-theme="green"] {
-  --bg-color: #004d40;
-  --text-color: #ffffff;
+  --bg-color: #003d33;
+  --text-color: #e8f5e9;
   --primary-color: #00e676;
+  --accent-color: #a5d6a7;
 }
 
-/* SUNSET */
+/* Sunset theme */
 body[data-theme="sunset"] {
   --bg-color: #ff5722;
   --text-color: #ffffff;
   --primary-color: #ff4081;
+  --accent-color: #ffeb3b;
 }
 
 body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
-  transition: all 0.3s ease;
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background-color 0.4s, color 0.4s;
 }
 
-header {
-  padding: 20px;
-  text-align: center;
+.site-header {
   background-color: var(--primary-color);
   color: white;
-  position: relative;
+  padding: 16px 0;
+}
+.header-inner {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+.site-title {
+  margin: 0;
+  font-size: 2rem;
 }
 
 .theme-toggle {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  border: 2px solid white;
   background: none;
+  border: 1px solid white;
   color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 8px 14px;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+.theme-toggle:hover {
+  background-color: rgba(255,255,255,0.2);
 }
 
-/* Add your other layout styles (hero, about, skills, contact, etc.) */
+.hero {
+  padding: 60px 20px;
+  text-align: center;
+}
+.hero-inner {
+  max-width: 600px;
+  margin: auto;
+}
+.profile-pic {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid var(--accent-color);
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.hero h2 {
+  font-size: 1.75rem;
+  margin: 10px 0;
+}
+.hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+section h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+section p {
+  line-height: 1.6;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.skills li {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.contact a {
+  display: inline-block;
+  margin-right: 20px;
+  color: var(--primary-color);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s;
+}
+.contact a:hover {
+  border-color: var(--primary-color);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .skills ul {
+    flex-direction: column;
+  }
+  .header-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .theme-toggle {
+    margin-top: 10px;
+  }
+}
