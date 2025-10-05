@@ -4,12 +4,21 @@
   --primary-color: #5a67d8;
 }
 
-body.dark {
+/* DARK THEME */
+body[data-theme="dark"] {
   --bg-color: #1a1a1a;
   --text-color: #f0f0f0;
   --primary-color: #7f9cf5;
 }
 
+/* BLUE THEME */
+body[data-theme="blue"] {
+  --bg-color: #001f3f;
+  --text-color: #ffffff;
+  --primary-color: #39CCCC;
+}
+
+/* COMMON STYLES */
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
