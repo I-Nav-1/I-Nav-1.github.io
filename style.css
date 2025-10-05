@@ -4,27 +4,40 @@
   --primary-color: #5a67d8;
 }
 
-/* DARK THEME */
+/* DARK */
 body[data-theme="dark"] {
-  --bg-color: #1a1a1a;
-  --text-color: #f0f0f0;
+  --bg-color: #121212;
+  --text-color: #ffffff;
   --primary-color: #7f9cf5;
 }
 
-/* BLUE THEME */
+/* BLUE */
 body[data-theme="blue"] {
   --bg-color: #001f3f;
   --text-color: #ffffff;
   --primary-color: #39CCCC;
 }
 
-/* COMMON STYLES */
+/* GREEN */
+body[data-theme="green"] {
+  --bg-color: #004d40;
+  --text-color: #ffffff;
+  --primary-color: #00e676;
+}
+
+/* SUNSET */
+body[data-theme="sunset"] {
+  --bg-color: #ff5722;
+  --text-color: #ffffff;
+  --primary-color: #ff4081;
+}
+
 body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: all 0.3s ease;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header {
@@ -35,80 +48,16 @@ header {
   position: relative;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
 .theme-toggle {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: none;
   border: 2px solid white;
+  background: none;
   color: white;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
 }
 
-section {
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: auto;
-}
-
-.hero {
-  text-align: center;
-}
-
-.hero img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-h2 {
-  color: var(--primary-color);
-  margin-bottom: 10px;
-}
-
-.skills ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.skills li {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 5px;
-}
-
-.contact a {
-  margin-right: 15px;
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9rem;
-  opacity: 0.7;
-}
-
-@media (max-width: 600px) {
-  .skills ul {
-    flex-direction: column;
-  }
-
-  .theme-toggle {
-    top: 10px;
-    right: 10px;
-  }
-}
+/* Add your other layout styles (hero, about, skills, contact, etc.) */
