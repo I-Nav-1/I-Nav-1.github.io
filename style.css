@@ -327,3 +327,34 @@ body[data-theme='sunset'] .theme-toggle {
   background: #005f99;
   border-radius: 5px;
 }
+
+/* Hamburger Button */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    background: #007acc;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .navbar-menu.active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
