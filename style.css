@@ -56,7 +56,6 @@ section h2 {
 }
 
 /* Skills */
-/* Skills */
 .skills ul {
   list-style: none;
   padding: 0;
@@ -70,16 +69,52 @@ section h2 {
   background: #007acc; /* Use a consistent theme color */
   color: white; /* Make the text stand out */
   padding: 10px 15px; /* Add more padding for better spacing */
-  margin: 5px; /* Remove this if using gap */
   border-radius: 20px; /* Rounded edges for a modern look */
   font-size: 0.9rem; /* Adjust font size for better readability */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
   transition: transform 0.2s ease, box-shadow 0.2s ease; /* Smooth hover effect */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 260px; /* keep long items from overflowing */
+  white-space: normal; /* allow wrapping for long labels */
+  text-align: center;
+}
+
+.skills li a {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  line-height: 1.2;
+  padding: 0; /* anchor uses parent's padding */
 }
 
 .skills li:hover {
   transform: translateY(-3px); /* Slight lift on hover */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.skills li a:focus {
+  outline: 2px solid rgba(255,255,255,0.6);
+  outline-offset: 3px;
+  border-radius: 16px;
+}
+
+/* Responsive adjustments for skills on small screens */
+@media (max-width: 600px) {
+  .skills ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skills li {
+    width: 100%;
+    max-width: 320px;
+  }
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 /* Contact */
@@ -358,3 +393,60 @@ body[data-theme='sunset'] .theme-toggle {
     display: block;
   }
 }
+
+/* mylearning Styles */
+
+ :root{
+      --accent:#007acc;
+      --muted:#f3f7fb;
+      --card:#ffffff;
+      --text:#122;
+    }
+    [data-theme='dark'] { --card:#222; --muted:#1b1b1b; --text:#eee; --accent:#4ea1ff; }
+
+    body{font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin:0; padding:24px; background:var(--muted); color:var(--text);}
+    .container{max-width:960px; margin:0 auto;}
+    .back {display:inline-block;margin-bottom:16px;color:var(--accent);text-decoration:none;font-weight:600;}
+    .hero {
+      background: linear-gradient(90deg, rgba(0,122,204,0.06), rgba(78,161,255,0.02));
+      border-left:6px solid var(--accent);
+      padding:18px;
+      border-radius:8px;
+      margin-bottom:20px;
+    }
+    .hero h1{margin:0 0 8px 0;font-size:1.35rem;}
+    .hero p{margin:0;color:#334;}
+    .highlight {
+      background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.75));
+      border-radius:8px;
+      padding:16px;
+      margin-top:14px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.06);
+      border:1px solid rgba(0,0,0,0.04);
+    }
+    .highlight strong{display:block;margin-bottom:8px;color:var(--accent);}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin-top:20px;}
+    .card{
+      background:var(--card);
+      border-radius:8px;padding:14px;
+      box-shadow:0 6px 18px rgba(0,0,0,0.04);
+      border:1px solid rgba(0,0,0,0.04);
+    }
+    .card h3{margin:0 0 8px 0;font-size:1rem;color:#003;}
+    .skill-meta{display:flex;justify-content:space-between;align-items:center;font-size:0.9rem;color:#445;margin-bottom:8px;}
+    .progress {
+      height:12px;background:linear-gradient(90deg, rgba(0,0,0,0.04), rgba(0,0,0,0.02));
+      border-radius:999px; overflow:hidden;
+    }
+    .progress-fill{
+      height:100%; width:0%; background:var(--accent); display:flex; align-items:center; justify-content:flex-end; padding-right:6px;
+      color:white; font-size:0.75rem; border-radius:999px; box-shadow:0 4px 12px rgba(0,122,204,0.12);
+      transition: width 1.2s cubic-bezier(.2,.9,.21,1);
+    }
+    .tools {margin-top:18px;padding:12px;border-radius:8px;background:rgba(0,122,204,0.03);}
+    .tools h4{margin:0 0 8px 0;font-size:0.95rem;color:var(--accent);}
+    .tools ul{margin:0;padding:0 0 0 18px;color:#224;}
+    .note{font-size:0.9rem;color:#556;margin-top:12px;}
+
+    /* small */
+    @media (max-width:420px){body{padding:12px}.hero h1{font-size:1.1rem}}
